@@ -10,6 +10,18 @@ fn main() {
     println!("the looping res {}", z);
     //
     loop_list();
+    //
+    string_things();
+}
+
+fn string_things() {
+    let mut x = String::from("hello");
+    x.push_str(" world");
+    println!("here is your string {}", x);
+    // move x to y now the x is not valid
+    let mut y = x;
+    y.push_str(" another one");
+    println!("here is your y string {}", y)
 }
 
 fn loop_list() {
